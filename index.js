@@ -36,7 +36,7 @@ window.loadLeverJobs = function (options) {
   }
 
   // Adding the account name to the API URL
-  var url = 'https://api.lever.co/v0/postings/' + options.accountName + '?group=team&mode=json';
+  var url = 'https://api.lever.co/v0/postings/' + options.accountName + '?group=team&mode=json&commitment=Full-time';
 
   function createJobs(_data) {
 
@@ -79,7 +79,13 @@ window.loadLeverJobs = function (options) {
 
       head.appendChild(link);
     }
-    addCss('https://andreasmb.github.io/lever-jobs-embed/embed-css/style.css');
+    var windowLocation = window.location.href;
+    if ( windowLocation.startsWith('http://localhost')) {
+        addCss('embed-css/style.css');
+    } else {
+        addCss('https://ecupaio.github.io/lever-jobs-embed/embed-css/style.css');
+    }
+
   }
 
   var request = new XMLHttpRequest();

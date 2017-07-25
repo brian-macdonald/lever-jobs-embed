@@ -1,5 +1,13 @@
 # Lever job list embed code creator
 
-Easily create a code that you can use to add a list of jobs to your own website. Access the site [here](https://andreasmb.github.io/lever-jobs-embed/). This a quick way to add your jobs to a CMS like Wordpress and Hubspot.
+Fork of https://github.com/andreasmb/lever-jobs-embed. Adding additional params to filter out internships and optimized for dems.org.
 
-(This code generator is not officially supported by Lever.)
+List of params for Lever API.
+
+# Local Development
+Serve through Mamp or go to http://PATH/TO/REPO/index.html
+
+# Widget
+```
+<div id='lever-jobs-container'></div><script type='text/javascript'>window.leverJobsOptions = {accountName: 'dnc', includeCss: true};</script><script type='text/javascript' src='https://ecupaio.github.io/lever-jobs-embed/index.js'></script>
+```
