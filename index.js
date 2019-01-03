@@ -46,8 +46,8 @@ window.loadLeverJobs = function (options) {
       var title = sanitizeHTML(_data[i].title || 'Uncategorized');
       var titlesanitizeAttribute = sanitizeAttribute(title);
 
-      content += '<ul class="lever-jobs-list ' + titlesanitizeAttribute + '">';
-      content += '<li class="lever-team ' + titlesanitizeAttribute + '"><h3 class="lever-team-title">' + title + '</h3></li>';
+      content += '<div class="lever-jobs-list ' + titlesanitizeAttribute + '">';
+      
 
       for (j = 0; j < _data[i].postings.length; j ++) {
         var posting = _data[i].postings[j];
@@ -60,10 +60,10 @@ window.loadLeverJobs = function (options) {
         var teamsanitizeAttribute = sanitizeAttribute(team);
         var link = posting.hostedUrl+leverParameter;
 
-        content += '<li class="lever-job ' + teamsanitizeAttribute + ' ' + locationsanitizeAttribute + ' ' + commitmentsanitizeAttribute + '">' +
-          '<a class="lever-job-title" href="' + link + '"">' + postingTitle + '</a><span class="lever-job-tag">' + location + '</span></li>';
+        content += '<div class="lever-job ' + teamsanitizeAttribute + ' ' + locationsanitizeAttribute + ' ' + commitmentsanitizeAttribute + '">' +
+          '<a class="lever-job-title" href="' + link + '"">' + postingTitle + '</a></div>';
       }
-      content += '</ul>';
+      content += '</div>';
     }
     document.getElementById("lever-jobs-container").innerHTML = content;
   }
