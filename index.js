@@ -83,7 +83,7 @@ window.loadLeverJobs = function (options) {
     if ( windowLocation.startsWith('http://localhost')) {
         addCss('embed-css/style.css');
     } else {
-        addCss('https://ecupaio.github.io/lever-jobs-embed/embed-css/style.css');
+        addCss('https://brian-macdonald.github.io/lever-jobs-embed/embed-css/style.css');
     }
 
   }
